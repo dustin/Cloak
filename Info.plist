@@ -19,7 +19,9 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.2.6</string>
+	<string>1.2.7</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
 	<key>LSUIElement</key>
 	<string>1</string>
 	<key>NSMainNibFile</key>
@@ -30,7 +32,5 @@
 	<string>http://public.west.spy.net/app/apphider.xml</string>
 	<key>SUScheduledCheckInterval</key>
 	<integer>86400</integer>
-	<key>LSApplicationCategoryType</key>
-	<string>public.app-category.utilities</string>
 </dict>
 </plist>
