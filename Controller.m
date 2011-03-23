@@ -36,6 +36,16 @@
     return applicationIcon;
 }
 
+-(void)showPrefs:(id)sender {
+    [NSApp activateIgnoringOtherApps:YES];
+    [prefs makeKeyAndOrderFront:sender];
+}
+
+-(void)showAbout:(id)sender {
+    [NSApp activateIgnoringOtherApps:YES];
+    [NSApp orderFrontStandardAboutPanel:sender];
+}
+
 -(void)rebuildMenu {
 	NSAutoreleasePool *pool=[[NSAutoreleasePool alloc] init];
 	// Remove existing items -- except quit at the bottom.
@@ -46,8 +56,8 @@
 	// About
 	NSMenuItem *aboutItem=[[NSMenuItem alloc]
 		initWithTitle: @"About App Hider"
-		action:@selector(orderFrontStandardAboutPanel:) keyEquivalent:@""];
-	[aboutItem setTarget: NSApp];
+		action:@selector(showAbout:) keyEquivalent:@""];
+	[aboutItem setTarget: self];
 	[aboutItem setEnabled:YES];
 	[appMenu addItem: aboutItem];
 	[aboutItem release];
@@ -85,8 +95,8 @@
 	// Prefs
 	NSMenuItem *prefsItem=[[NSMenuItem alloc]
 		initWithTitle: @"Preferences"
-		action:@selector(makeKeyAndOrderFront:) keyEquivalent:@""];
-	[prefsItem setTarget: prefs];
+		action:@selector(showPrefs:) keyEquivalent:@""];
+	[prefsItem setTarget: self];
 	[prefsItem setEnabled:YES];
 	[appMenu addItem: prefsItem];
 	[prefsItem release];
