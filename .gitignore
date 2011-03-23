@@ -1,9 +1,12 @@
-build
-Growl-WithInstaller.framework
-Sparkle.framework
-._Sparkle.framework
 *.mode1
 *.mode1v3
 *.pbxuser
 *~.nib
 .DS_Store
+._Sparkle.framework
+Growl-WithInstaller.framework
+Sparkle.framework
+__MACOSX
+build
+project.xcworkspace
+xcuserdata
