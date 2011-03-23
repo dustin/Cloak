@@ -20,8 +20,10 @@
 
 	IBOutlet AppTracker *tracker;
 	IBOutlet SUUpdater *sparkleUpdater;
+
 }
 
--(IBAction)changeLoginItems:(id)sender;
+-(BOOL)inLoginItems;
+-(void)setInLoginItems:(BOOL)to;
 
 @end
