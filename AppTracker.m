@@ -139,25 +139,46 @@
 	[script release];
 }
 
+-(void)hideApp:(NSTimer*)timer {
+    NSDictionary *app = [timer userInfo];
+    [self hideApp:app name:[app valueForKey:@"NSApplicationPath"]];
+}
+
 -(void)checkIdleApps:(NSTimer*)timer {
 	NSAutoreleasePool *pool=[[NSAutoreleasePool alloc] init];
 
 	NSEnumerator *enumerator = [activityTimes keyEnumerator];
+    NSMutableArray *toRemove = nil;
     id nm;
 	while ((nm = [enumerator nextObject]) != nil) {
 		NSDate *lastUpdate=[activityTimes valueForKey:nm];
 		if(lastUpdate != nil) {
 			NSDictionary *app=[currentApps valueForKey:nm];
-			// NSLog(@"Interval since %@:  %f", nm, [lastUpdate timeIntervalSinceNow]);
+            // NSLog(@"Interval since %@:  %f", nm, [lastUpdate timeIntervalSinceNow]);
 			if([lastUpdate timeIntervalSinceNow] + maxAge < 0
-				&& ![ignored containsObject: [app valueForKey:@"NSApplicationPath"]]) {
-				NSLog(@"Hiding %@", nm);
-				[self hideApp: app name:nm];
+               && ![ignored containsObject: [app valueForKey:@"NSApplicationPath"]]) {
+                [NSTimer scheduledTimerWithTimeInterval:0
+                                                 target:self
+                                               selector:@selector(hideApp:)
+                                               userInfo:app
+                                                repeats:NO];
 				// Take it out of the list we're enumerating
-				[activityTimes removeObjectForKey:nm];
+                if (toRemove == nil) {
+                    toRemove = [[NSMutableArray alloc] init];
+                }
+                [toRemove addObject: nm];
 			}
 		}
 	}
+
+    if (toRemove) {
+        NSEnumerator *e = [toRemove objectEnumerator];
+        id ob;
+        while ((ob = [e nextObject])) {
+            [activityTimes removeObjectForKey:ob];
+        }
+        [toRemove release];
+    }
 
 	[pool release];
 }
