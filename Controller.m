@@ -152,12 +152,9 @@
 -(void)setDefaultDefaults {
 	[[NSUserDefaults standardUserDefaults]
 		registerDefaults: [NSDictionary dictionaryWithObjectsAndKeys:
-			[NSNumber numberWithFloat:180.0], @"freq",
+			[NSNumber numberWithInt:5*60], @"freq",
 			[NSArray array], @"ignored", nil, nil]];
-	// This looks dumb, but preferences doesn't work correctly without it
-	[[NSUserDefaults standardUserDefaults]
-		setFloat:[[NSUserDefaults standardUserDefaults] floatForKey:@"freq"]
-		forKey:@"freq"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 -(void)awakeFromNib {
