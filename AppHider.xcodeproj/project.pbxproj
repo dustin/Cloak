@@ -17,6 +17,11 @@
 		DA4F15B10C038E9800328372 /* Sparkle.framework in Add Sparkle */ = {isa = PBXBuildFile; fileRef = DA4F15920C038E6300328372 /* Sparkle.framework */; };
 		DA57583E0B863613000D83CD /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = DA57583D0B863613000D83CD /* Controller.m */; };
 		DA61C6CD133AF8730095F5CF /* LoginItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C6CC133AF8730095F5CF /* LoginItemManager.m */; };
+		DA61C6E8133B004B0095F5CF /* ReadableTimeValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C6E7133B004B0095F5CF /* ReadableTimeValueTransformer.m */; };
+		DA61C6FC133B02220095F5CF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA61C6FB133B02220095F5CF /* Cocoa.framework */; };
+		DA61C702133B02220095F5CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA61C700133B02220095F5CF /* InfoPlist.strings */; };
+		DA61C70B133B03970095F5CF /* ValueTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C6EA133B01900095F5CF /* ValueTransformerTests.m */; };
+		DA61C70C133B03C00095F5CF /* ReadableTimeValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C6E7133B004B0095F5CF /* ReadableTimeValueTransformer.m */; };
 		DA8E880D0BFF8929004BDBB7 /* Growl-WithInstaller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */; };
 		DA8E88650BFF8CCC004BDBB7 /* Growl-WithInstaller.framework in Add Growl */ = {isa = PBXBuildFile; fileRef = DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +70,15 @@
 		DA57583D0B863613000D83CD /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
 		DA61C6CB133AF8730095F5CF /* LoginItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginItemManager.h; sourceTree = "<group>"; };
 		DA61C6CC133AF8730095F5CF /* LoginItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginItemManager.m; sourceTree = "<group>"; };
+		DA61C6E6133B004A0095F5CF /* ReadableTimeValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadableTimeValueTransformer.h; sourceTree = "<group>"; };
+		DA61C6E7133B004B0095F5CF /* ReadableTimeValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadableTimeValueTransformer.m; sourceTree = "<group>"; };
+		DA61C6E9133B01900095F5CF /* ValueTransformerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValueTransformerTests.h; path = ../ValueTransformerTests.h; sourceTree = "<group>"; };
+		DA61C6EA133B01900095F5CF /* ValueTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ValueTransformerTests.m; path = ../ValueTransformerTests.m; sourceTree = "<group>"; };
+		DA61C6FA133B02220095F5CF /* AppHiderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppHiderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA61C6FB133B02220095F5CF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DA61C6FF133B02220095F5CF /* AppHiderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppHiderTests-Info.plist"; sourceTree = "<group>"; };
+		DA61C701133B02220095F5CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA61C703133B02220095F5CF /* AppHiderTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppHiderTests-Prefix.pch"; sourceTree = "<group>"; };
 		DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Growl-WithInstaller.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +90,14 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				DA8E880D0BFF8929004BDBB7 /* Growl-WithInstaller.framework in Frameworks */,
 				DA4F15930C038E6300328372 /* Sparkle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA61C6F6133B02220095F5CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA61C6FC133B02220095F5CF /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +113,8 @@
 				DA2439D50B86D597007A594A /* AppTracker.m */,
 				DA61C6CB133AF8730095F5CF /* LoginItemManager.h */,
 				DA61C6CC133AF8730095F5CF /* LoginItemManager.m */,
+				DA61C6E6133B004A0095F5CF /* ReadableTimeValueTransformer.h */,
+				DA61C6E7133B004B0095F5CF /* ReadableTimeValueTransformer.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -118,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* AppHider.app */,
+				DA61C6FA133B02220095F5CF /* AppHiderTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +153,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				DA61C6FD133B02220095F5CF /* AppHiderTests */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -159,9 +185,30 @@
 			children = (
 				DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				DA61C6FB133B02220095F5CF /* Cocoa.framework */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA61C6FD133B02220095F5CF /* AppHiderTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA61C6E9133B01900095F5CF /* ValueTransformerTests.h */,
+				DA61C6EA133B01900095F5CF /* ValueTransformerTests.m */,
+				DA61C6FE133B02220095F5CF /* Supporting Files */,
+			);
+			path = AppHiderTests;
+			sourceTree = "<group>";
+		};
+		DA61C6FE133B02220095F5CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA61C6FF133B02220095F5CF /* AppHiderTests-Info.plist */,
+				DA61C700133B02220095F5CF /* InfoPlist.strings */,
+				DA61C703133B02220095F5CF /* AppHiderTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +234,24 @@
 			productReference = 8D1107320486CEB800E47090 /* AppHider.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DA61C6F9133B02220095F5CF /* AppHiderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA61C708133B02220095F5CF /* Build configuration list for PBXNativeTarget "AppHiderTests" */;
+			buildPhases = (
+				DA61C6F5133B02220095F5CF /* Sources */,
+				DA61C6F6133B02220095F5CF /* Frameworks */,
+				DA61C6F7133B02220095F5CF /* Resources */,
+				DA61C6F8133B02220095F5CF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppHiderTests;
+			productName = AppHiderTests;
+			productReference = DA61C6FA133B02220095F5CF /* AppHiderTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +269,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* AppHider */,
+				DA61C6F9133B02220095F5CF /* AppHiderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -219,7 +285,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA61C6F7133B02220095F5CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA61C702133B02220095F5CF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA61C6F8133B02220095F5CF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -230,6 +320,16 @@
 				DA57583E0B863613000D83CD /* Controller.m in Sources */,
 				DA2439D60B86D597007A594A /* AppTracker.m in Sources */,
 				DA61C6CD133AF8730095F5CF /* LoginItemManager.m in Sources */,
+				DA61C6E8133B004B0095F5CF /* ReadableTimeValueTransformer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA61C6F5133B02220095F5CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA61C70C133B03C00095F5CF /* ReadableTimeValueTransformer.m in Sources */,
+				DA61C70B133B03970095F5CF /* ValueTransformerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +358,14 @@
 				DA1B35290B86EC4500E2D853 /* English */,
 			);
 			name = Credits.html;
+			sourceTree = "<group>";
+		};
+		DA61C700133B02220095F5CF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA61C701133B02220095F5CF /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -331,6 +439,59 @@
 			};
 			name = Release;
 		};
+		DA61C709133B02220095F5CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ONLY_ACTIVE_ARCH_PRE_XCODE_3_1)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppHiderTests/AppHiderTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "AppHiderTests/AppHiderTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH_PRE_XCODE_3_1 = "$(NATIVE_ARCH_ACTUAL)";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DA61C70A133B02220095F5CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppHiderTests/AppHiderTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "AppHiderTests/AppHiderTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -351,6 +512,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		DA61C708133B02220095F5CF /* Build configuration list for PBXNativeTarget "AppHiderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA61C709133B02220095F5CF /* Debug */,
+				DA61C70A133B02220095F5CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
