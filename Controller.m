@@ -249,14 +249,6 @@
 
 -(void)awakeFromNib {
 	[self setDefaultDefaults];
-	if([[NSUserDefaults standardUserDefaults] valueForKey:@"hasSetInitialLoginItem"] == nil) {
-		NSLog(@"Setting initial login item.");
-		[self addToLoginItems: self];
-		[[NSUserDefaults standardUserDefaults]
-			setBool:YES	forKey:@"hasSetInitialLoginItem"];
-		[[NSUserDefaults standardUserDefaults]
-			setBool:YES	forKey:@"AddToLoginItems"];
-	}
 
 	[tracker addObserver:self forKeyPath:@"currentApps"
 		options:NSKeyValueObservingOptionNew context:nil];
