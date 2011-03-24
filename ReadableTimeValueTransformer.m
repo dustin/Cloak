@@ -46,6 +46,10 @@
     return [NSString stringWithFormat:@"%d%c", x, extensions[offset]];
 }
 
+static int max(int a, int b) {
+    return a > b ? a : b;
+}
+
 - (id)reverseTransformedValue:(id)value {
     int multiplier = 1;
     if ([value length] > 0) {
@@ -63,7 +67,7 @@
                 multiplier = 1;
                 break;
         }
-        return [NSNumber numberWithInt:([value intValue] * multiplier)];
+        return [NSNumber numberWithInt:(max(1, [value intValue]) * multiplier)];
     } else {
         return [NSNumber numberWithInt:1];
     }

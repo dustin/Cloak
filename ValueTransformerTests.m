@@ -30,6 +30,18 @@
                    @"Failed reverse.");
 }
 
+- (void)testZero
+{
+    STAssertEquals(1, [[transformer reverseTransformedValue:@"0s"] intValue],
+                   @"Failed zero reverse.");
+}
+
+- (void)testJunk
+{
+    STAssertEquals(1, [[transformer reverseTransformedValue:@"Hello!"] intValue],
+                   @"Failed junk.");
+}
+
 - (void)testOneSecond
 {
     NSString *parsed = [transformer transformedValue:[NSNumber numberWithInt:1]];
