@@ -9,6 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #import <AppTracker.h>
 
+#import "LoginItemManager.h"
+
 #import "Sparkle/SUUPdater.h"
 
 @interface Controller : NSObject {
@@ -21,6 +23,7 @@
 	IBOutlet AppTracker *tracker;
 	IBOutlet SUUpdater *sparkleUpdater;
 
+    IBOutlet LoginItemManager *loginItems;
 }
 
 -(BOOL)inLoginItems;

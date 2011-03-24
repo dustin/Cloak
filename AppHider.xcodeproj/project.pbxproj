@@ -16,6 +16,7 @@
 		DA4F15930C038E6300328372 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4F15920C038E6300328372 /* Sparkle.framework */; };
 		DA4F15B10C038E9800328372 /* Sparkle.framework in Add Sparkle */ = {isa = PBXBuildFile; fileRef = DA4F15920C038E6300328372 /* Sparkle.framework */; };
 		DA57583E0B863613000D83CD /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = DA57583D0B863613000D83CD /* Controller.m */; };
+		DA61C6CD133AF8730095F5CF /* LoginItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C6CC133AF8730095F5CF /* LoginItemManager.m */; };
 		DA8E880D0BFF8929004BDBB7 /* Growl-WithInstaller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */; };
 		DA8E88650BFF8CCC004BDBB7 /* Growl-WithInstaller.framework in Add Growl */ = {isa = PBXBuildFile; fileRef = DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,8 @@
 		DA4F15920C038E6300328372 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		DA57583C0B863613000D83CD /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		DA57583D0B863613000D83CD /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
+		DA61C6CB133AF8730095F5CF /* LoginItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginItemManager.h; sourceTree = "<group>"; };
+		DA61C6CC133AF8730095F5CF /* LoginItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginItemManager.m; sourceTree = "<group>"; };
 		DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Growl-WithInstaller.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +89,8 @@
 				DA57583D0B863613000D83CD /* Controller.m */,
 				DA2439D40B86D597007A594A /* AppTracker.h */,
 				DA2439D50B86D597007A594A /* AppTracker.m */,
+				DA61C6CB133AF8730095F5CF /* LoginItemManager.h */,
+				DA61C6CC133AF8730095F5CF /* LoginItemManager.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				DA57583E0B863613000D83CD /* Controller.m in Sources */,
 				DA2439D60B86D597007A594A /* AppTracker.m in Sources */,
+				DA61C6CD133AF8730095F5CF /* LoginItemManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

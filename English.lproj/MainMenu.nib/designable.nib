@@ -68,7 +68,7 @@
 						<object class="NSSlider" id="158396115">
 							<reference key="NSNextResponder" ref="997814125"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{10, 81}, {301, 18}}</string>
+							<string key="NSFrame">{{10, 82}, {301, 17}}</string>
 							<reference key="NSSuperview" ref="997814125"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="591927850"/>
@@ -89,8 +89,8 @@
 								<double key="NSMinValue">1</double>
 								<double key="NSValue">60</double>
 								<double key="NSAltIncValue">0.0</double>
-								<int key="NSNumberOfTickMarks">15</int>
-								<int key="NSTickMarkPosition">1</int>
+								<int key="NSNumberOfTickMarks">13</int>
+								<int key="NSTickMarkPosition">0</int>
 								<bool key="NSAllowsTickMarkValuesOnly">NO</bool>
 								<bool key="NSVertical">NO</bool>
 							</object>
@@ -210,7 +210,7 @@
 						<object class="NSButton" id="22610162">
 							<reference key="NSNextResponder" ref="997814125"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{8, 58}, {204, 18}}</string>
+							<string key="NSFrame">{{8, 38}, {204, 18}}</string>
 							<reference key="NSSuperview" ref="997814125"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="768600415"/>
@@ -239,7 +239,7 @@
 						<object class="NSButton" id="768600415">
 							<reference key="NSNextResponder" ref="997814125"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{8, 38}, {204, 18}}</string>
+							<string key="NSFrame">{{8, 18}, {204, 18}}</string>
 							<reference key="NSSuperview" ref="997814125"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView"/>
@@ -285,6 +285,9 @@
 			</object>
 			<object class="NSCustomObject" id="24996008">
 				<string key="NSClassName">SUUpdater</string>
+			</object>
+			<object class="NSCustomObject" id="1002286040">
+				<string key="NSClassName">LoginItemManager</string>
 			</object>
 			<object class="NSUserDefaultsController" id="624487381">
 				<bool key="NSSharedInstance">YES</bool>
@@ -407,6 +410,14 @@
 					</object>
 					<int key="connectionID">293</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">loginItems</string>
+						<reference key="source" ref="170730398"/>
+						<reference key="destination" ref="1002286040"/>
+					</object>
+					<int key="connectionID">295</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -456,8 +467,8 @@
 							<reference ref="158396115"/>
 							<reference ref="591927850"/>
 							<reference ref="871394741"/>
-							<reference ref="22610162"/>
 							<reference ref="768600415"/>
+							<reference ref="22610162"/>
 						</array>
 						<reference key="parent" ref="892945708"/>
 					</object>
@@ -563,6 +574,11 @@
 						<reference key="parent" ref="0"/>
 						<string key="objectName">Application</string>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">294</int>
+						<reference key="object" ref="1002286040"/>
+						<reference key="parent" ref="0"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -602,12 +618,13 @@
 				<string key="288.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="289.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="290.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="294.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">293</int>
+			<int key="maxID">295</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -624,6 +641,7 @@
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="appMenu">NSMenu</string>
+						<string key="loginItems">LoginItemManager</string>
 						<string key="prefs">NSPanel</string>
 						<string key="sparkleUpdater">SUUpdater</string>
 						<string key="statusItem">NSStatusItem</string>
@@ -633,6 +651,10 @@
 						<object class="IBToOneOutletInfo" key="appMenu">
 							<string key="name">appMenu</string>
 							<string key="candidateClassName">NSMenu</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="loginItems">
+							<string key="name">loginItems</string>
+							<string key="candidateClassName">LoginItemManager</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="prefs">
 							<string key="name">prefs</string>
@@ -654,6 +676,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/Controller.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">LoginItemManager</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/LoginItemManager.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
