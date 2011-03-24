@@ -11,8 +11,6 @@
 
 #import "LoginItemManager.h"
 
-#import "Sparkle/SUUPdater.h"
-
 @interface Controller : NSObject {
 
 	IBOutlet NSMenu *appMenu;
@@ -21,7 +19,6 @@
 	IBOutlet NSStatusItem *statusItem;
 
 	IBOutlet AppTracker *tracker;
-	IBOutlet SUUpdater *sparkleUpdater;
 
     IBOutlet LoginItemManager *loginItems;
 }

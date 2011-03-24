@@ -13,8 +13,6 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		DA1B352A0B86EC4500E2D853 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = DA1B35280B86EC4500E2D853 /* Credits.html */; };
 		DA2439D60B86D597007A594A /* AppTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2439D50B86D597007A594A /* AppTracker.m */; };
-		DA4F15930C038E6300328372 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4F15920C038E6300328372 /* Sparkle.framework */; };
-		DA4F15B10C038E9800328372 /* Sparkle.framework in Add Sparkle */ = {isa = PBXBuildFile; fileRef = DA4F15920C038E6300328372 /* Sparkle.framework */; };
 		DA57583E0B863613000D83CD /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = DA57583D0B863613000D83CD /* Controller.m */; };
 		DA61C6CD133AF8730095F5CF /* LoginItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C6CC133AF8730095F5CF /* LoginItemManager.m */; };
 		DA61C6E8133B004B0095F5CF /* ReadableTimeValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C6E7133B004B0095F5CF /* ReadableTimeValueTransformer.m */; };
@@ -27,17 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		DA4F15AA0C038E7C00328372 /* Add Sparkle */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				DA4F15B10C038E9800328372 /* Sparkle.framework in Add Sparkle */,
-			);
-			name = "Add Sparkle";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DA8E88620BFF8CA7004BDBB7 /* Add Growl */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,7 +76,6 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				DA8E880D0BFF8929004BDBB7 /* Growl-WithInstaller.framework in Frameworks */,
-				DA4F15930C038E6300328372 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +208,6 @@
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				DA8E88620BFF8CA7004BDBB7 /* Add Growl */,
-				DA4F15AA0C038E7C00328372 /* Add Sparkle */,
 			);
 			buildRules = (
 			);
@@ -520,6 +505,7 @@
 				DA61C70A133B02220095F5CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
