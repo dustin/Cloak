@@ -129,7 +129,7 @@
 }
 
 -(BOOL) inLoginItems {
-    NSUserDefaults * defaults = [[NSUserDefaults alloc] init];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     BOOL rv = NO;
     
     [defaults addSuiteNamed:@"loginwindow"];
@@ -148,12 +148,11 @@
         }
     }
     
-    [defaults release];
     return rv;
 }
 
 -(void) removeLoginItem:(id)sender {
-    NSUserDefaults * defaults = [[NSUserDefaults alloc] init];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     [defaults addSuiteNamed:@"loginwindow"];
     
@@ -182,7 +181,6 @@
                           loginItems, (CFStringRef)@"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
     CFPreferencesSynchronize((CFStringRef) @"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
     
-    [defaults release];
 }
 
 // XXX:  I need to make this be able to add or remove, and validate the current user wishes.
@@ -190,8 +188,8 @@
     
     [self removeLoginItem: self];
     
-    NSMutableDictionary * myDict=[[NSMutableDictionary alloc] init];
-    NSUserDefaults * defaults = [[NSUserDefaults alloc] init];
+    NSMutableDictionary *myDict=[[NSMutableDictionary alloc] init];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     [defaults addSuiteNamed:@"loginwindow"];
     
@@ -214,7 +212,6 @@
                           loginItems, (CFStringRef)@"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
     CFPreferencesSynchronize((CFStringRef) @"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
     
-    [defaults release];
     [myDict release];
     [loginItems release];
 }
