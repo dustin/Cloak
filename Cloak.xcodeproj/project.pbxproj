@@ -48,7 +48,7 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* AppHider_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHider_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* AppHider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppHider.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* Cloak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1B35290B86EC4500E2D853 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; name = English; path = English.lproj/Credits.html; sourceTree = "<group>"; };
 		DA2439D40B86D597007A594A /* AppTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTracker.h; sourceTree = "<group>"; };
 		DA2439D50B86D597007A594A /* AppTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTracker.m; sourceTree = "<group>"; };
@@ -61,11 +61,11 @@
 		DA61C6E7133B004B0095F5CF /* ReadableTimeValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadableTimeValueTransformer.m; sourceTree = "<group>"; };
 		DA61C6E9133B01900095F5CF /* ValueTransformerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValueTransformerTests.h; path = ../ValueTransformerTests.h; sourceTree = "<group>"; };
 		DA61C6EA133B01900095F5CF /* ValueTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ValueTransformerTests.m; path = ../ValueTransformerTests.m; sourceTree = "<group>"; };
-		DA61C6FA133B02220095F5CF /* AppHiderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppHiderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA61C6FA133B02220095F5CF /* CloakTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloakTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA61C6FB133B02220095F5CF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		DA61C6FF133B02220095F5CF /* AppHiderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppHiderTests-Info.plist"; sourceTree = "<group>"; };
+		DA61C6FF133B02220095F5CF /* CloakTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CloakTests-Info.plist"; sourceTree = "<group>"; };
 		DA61C701133B02220095F5CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DA61C703133B02220095F5CF /* AppHiderTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppHiderTests-Prefix.pch"; sourceTree = "<group>"; };
+		DA61C703133B02220095F5CF /* CloakTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloakTests-Prefix.pch"; sourceTree = "<group>"; };
 		DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Growl-WithInstaller.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,8 +127,8 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* AppHider.app */,
-				DA61C6FA133B02220095F5CF /* AppHiderTests.octest */,
+				8D1107320486CEB800E47090 /* Cloak.app */,
+				DA61C6FA133B02220095F5CF /* CloakTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,9 +190,9 @@
 		DA61C6FE133B02220095F5CF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DA61C6FF133B02220095F5CF /* AppHiderTests-Info.plist */,
+				DA61C6FF133B02220095F5CF /* CloakTests-Info.plist */,
 				DA61C700133B02220095F5CF /* InfoPlist.strings */,
-				DA61C703133B02220095F5CF /* AppHiderTests-Prefix.pch */,
+				DA61C703133B02220095F5CF /* CloakTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -200,9 +200,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* AppHider */ = {
+		8D1107260486CEB800E47090 /* Cloak */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "AppHider" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Cloak" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
@@ -213,15 +213,15 @@
 			);
 			dependencies = (
 			);
-			name = AppHider;
+			name = Cloak;
 			productInstallPath = "$(HOME)/Applications";
 			productName = AppHider;
-			productReference = 8D1107320486CEB800E47090 /* AppHider.app */;
+			productReference = 8D1107320486CEB800E47090 /* Cloak.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DA61C6F9133B02220095F5CF /* AppHiderTests */ = {
+		DA61C6F9133B02220095F5CF /* CloakTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA61C708133B02220095F5CF /* Build configuration list for PBXNativeTarget "AppHiderTests" */;
+			buildConfigurationList = DA61C708133B02220095F5CF /* Build configuration list for PBXNativeTarget "CloakTests" */;
 			buildPhases = (
 				DA61C6F5133B02220095F5CF /* Sources */,
 				DA61C6F6133B02220095F5CF /* Frameworks */,
@@ -232,9 +232,9 @@
 			);
 			dependencies = (
 			);
-			name = AppHiderTests;
+			name = CloakTests;
 			productName = AppHiderTests;
-			productReference = DA61C6FA133B02220095F5CF /* AppHiderTests.octest */;
+			productReference = DA61C6FA133B02220095F5CF /* CloakTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -242,7 +242,10 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "AppHider" */;
+			attributes = {
+				ORGANIZATIONNAME = net.spy;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Cloak" */;
 			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -253,8 +256,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* AppHider */,
-				DA61C6F9133B02220095F5CF /* AppHiderTests */,
+				8D1107260486CEB800E47090 /* Cloak */,
+				DA61C6F9133B02220095F5CF /* CloakTests */,
 			);
 		};
 /* End PBXProject section */
@@ -373,7 +376,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = AppHider;
+				PRODUCT_NAME = Cloak;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
@@ -396,7 +399,7 @@
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = AppHider;
+				PRODUCT_NAME = Cloak;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
@@ -436,12 +439,12 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AppHiderTests/AppHiderTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "AppHiderTests/CloakTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				INFOPLIST_FILE = "AppHiderTests/AppHiderTests-Info.plist";
+				INFOPLIST_FILE = "AppHiderTests/CloakTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH_PRE_XCODE_3_1 = "$(NATIVE_ARCH_ACTUAL)";
 				OTHER_LDFLAGS = (
@@ -463,10 +466,10 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AppHiderTests/AppHiderTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "AppHiderTests/CloakTests-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				INFOPLIST_FILE = "AppHiderTests/AppHiderTests-Info.plist";
+				INFOPLIST_FILE = "AppHiderTests/CloakTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -480,7 +483,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "AppHider" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Cloak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,
@@ -489,7 +492,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "AppHider" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Cloak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
@@ -498,7 +501,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA61C708133B02220095F5CF /* Build configuration list for PBXNativeTarget "AppHiderTests" */ = {
+		DA61C708133B02220095F5CF /* Build configuration list for PBXNativeTarget "CloakTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA61C709133B02220095F5CF /* Debug */,

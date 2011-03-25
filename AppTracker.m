@@ -263,7 +263,7 @@
 
 -(NSString *)applicationNameForGrowl
 {
-    return(@"AppHider");
+    return(@"Cloak");
 }
 
 -(void)growlNotificationWasClicked:(id)clickContext

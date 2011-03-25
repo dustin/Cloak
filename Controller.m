@@ -55,7 +55,7 @@
 
 	// About
 	NSMenuItem *aboutItem=[[NSMenuItem alloc]
-		initWithTitle: @"About App Hider"
+		initWithTitle: @"About Cloak"
 		action:@selector(showAbout:) keyEquivalent:@""];
 	[aboutItem setTarget: self];
 	[aboutItem setEnabled:YES];
@@ -103,7 +103,7 @@
 
 	// Quit 
 	NSMenuItem *quitItem=[[NSMenuItem alloc]
-		initWithTitle: @"Quit App Hider"
+		initWithTitle: @"Quit Cloak"
 		action:@selector(terminate:) keyEquivalent:@""];
 	[quitItem setTarget: NSApp];
 	[quitItem setEnabled:YES];
