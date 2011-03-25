@@ -26,12 +26,9 @@
 }
 
 -(BOOL) inLoginItems {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     BOOL rv = NO;
     
-    [defaults addSuiteNamed:@"loginwindow"];
-    
-    NSMutableArray *loginItems=[[[defaults
+    NSMutableArray *loginItems=[[[[NSUserDefaults standardUserDefaults]
                                   persistentDomainForName:@"loginwindow"]
                                  objectForKey:@"AutoLaunchedApplicationDictionary"] mutableCopy];
     
@@ -49,11 +46,7 @@
 }
 
 -(void) removeLoginItem:(id)sender {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    [defaults addSuiteNamed:@"loginwindow"];
-    
-    NSMutableArray *loginItems=[[[defaults
+    NSMutableArray *loginItems=[[[[NSUserDefaults standardUserDefaults]
                                   persistentDomainForName:@"loginwindow"]
                                  objectForKey:@"AutoLaunchedApplicationDictionary"] mutableCopy];
     
@@ -69,10 +62,6 @@
         }
     }
     
-    [defaults removeObjectForKey:@"AutoLaunchedApplicationDictionary"];
-    [defaults setObject:loginItems forKey:
-     @"AutoLaunchedApplicationDictionary"];
-    
     // Use the corefoundation API since I can't figure out the other one.
     CFPreferencesSetValue((CFStringRef)@"AutoLaunchedApplicationDictionary",
                           loginItems, (CFStringRef)@"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
@@ -85,23 +74,17 @@
     [self removeLoginItem: self];
     
     NSMutableDictionary *myDict=[[NSMutableDictionary alloc] init];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    [defaults addSuiteNamed:@"loginwindow"];
     
     NSLog(@"Adding login item: %@", [[NSBundle mainBundle] bundlePath]);
     [myDict setObject:[NSNumber numberWithBool:NO] forKey:@"Hide"];
     [myDict setObject:[[NSBundle mainBundle] bundlePath]
                forKey:@"Path"];
     
-    NSMutableArray *loginItems=[[[defaults
+    NSMutableArray *loginItems=[[[[NSUserDefaults standardUserDefaults]
                                   persistentDomainForName:@"loginwindow"]
                                  objectForKey:@"AutoLaunchedApplicationDictionary"] mutableCopy];
     
     [loginItems addObject:myDict];
-    [defaults removeObjectForKey:@"AutoLaunchedApplicationDictionary"];
-    [defaults setObject:loginItems forKey:
-     @"AutoLaunchedApplicationDictionary"];
     
     // Use the corefoundation API since I can't figure out the other one.
     CFPreferencesSetValue((CFStringRef)@"AutoLaunchedApplicationDictionary",
