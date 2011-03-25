@@ -141,7 +141,8 @@
 
 -(void)hideApp:(NSTimer*)timer {
     NSDictionary *app = [timer userInfo];
-    [self hideApp:app name:[app valueForKey:@"NSApplicationPath"]];
+    NSString *appName = [app valueForKey:@"NSApplicationName"];
+    [self hideApp:app name:appName];
 }
 
 -(void)checkIdleApps:(NSTimer*)timer {
@@ -157,11 +158,13 @@
             // NSLog(@"Interval since %@:  %f", nm, [lastUpdate timeIntervalSinceNow]);
 			if([lastUpdate timeIntervalSinceNow] + maxAge < 0
                && ![ignored containsObject: [app valueForKey:@"NSApplicationPath"]]) {
-                [NSTimer scheduledTimerWithTimeInterval:0
-                                                 target:self
-                                               selector:@selector(hideApp:)
-                                               userInfo:app
-                                                repeats:NO];
+                if (app != nil) {
+                    [NSTimer scheduledTimerWithTimeInterval:0
+                                                     target:self
+                                                   selector:@selector(hideApp:)
+                                                   userInfo:app
+                                                    repeats:NO];
+                }
 				// Take it out of the list we're enumerating
                 if (toRemove == nil) {
                     toRemove = [[NSMutableArray alloc] init];
