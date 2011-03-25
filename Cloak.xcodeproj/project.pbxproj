@@ -6,6 +6,21 @@
 	objectVersion = 42;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		DAE8E5F6133D3509007D44DE /* Zip */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DAE8E5F9133D3509007D44DE /* Build configuration list for PBXAggregateTarget "Zip" */;
+			buildPhases = (
+				DAE8E5FE133D3546007D44DE /* Zip it up */,
+			);
+			dependencies = (
+				DAE8E5FC133D3515007D44DE /* PBXTargetDependency */,
+			);
+			name = Zip;
+			productName = Zip;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -23,6 +38,16 @@
 		DA8E880D0BFF8929004BDBB7 /* Growl-WithInstaller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */; };
 		DA8E88650BFF8CCC004BDBB7 /* Growl-WithInstaller.framework in Add Growl */ = {isa = PBXBuildFile; fileRef = DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAE8E5FB133D3515007D44DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = Cloak;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		DA8E88620BFF8CA7004BDBB7 /* Add Growl */ = {
@@ -256,6 +281,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				DAE8E5F6133D3509007D44DE /* Zip */,
 				8D1107260486CEB800E47090 /* Cloak */,
 				DA61C6F9133B02220095F5CF /* CloakTests */,
 			);
@@ -297,6 +323,21 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		DAE8E5FE133D3546007D44DE /* Zip it up */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Zip it up";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Cloak-$()",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$BUILT_PRODUCTS_DIR\"\nV=$(/usr/libexec/PlistBuddy \"$PROJECT_NAME.app/Contents/Info.plist\" -c 'Print CFBundleVersion')\nzip -yr \"$PROJECT_NAME-$V.zip\" \"$PROJECT_NAME.app\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -322,6 +363,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAE8E5FC133D3515007D44DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* Cloak */;
+			targetProxy = DAE8E5FB133D3515007D44DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
@@ -480,6 +529,20 @@
 			};
 			name = Release;
 		};
+		DAE8E5F7133D3509007D44DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DAE8E5F8133D3509007D44DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -509,6 +572,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		DAE8E5F9133D3509007D44DE /* Build configuration list for PBXAggregateTarget "Zip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAE8E5F7133D3509007D44DE /* Debug */,
+				DAE8E5F8133D3509007D44DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
