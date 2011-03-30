@@ -132,8 +132,9 @@
 }
 
 -(void)initStatusBar {
-	statusItem=[[NSStatusBar systemStatusBar] statusItemWithLength: 40.0];
-	[statusItem setTitle: @"hide"];
+	statusItem=[[NSStatusBar systemStatusBar] statusItemWithLength: 26.0];
+	NSImage *statusIcon = [NSImage imageNamed:@"cloak-status.png"];
+	[statusItem setImage: statusIcon];
 	[statusItem setMenu: appMenu];
 	[statusItem setEnabled:YES];
 	[statusItem setHighlightMode:YES];

@@ -37,6 +37,8 @@
 		DA61C70C133B03C00095F5CF /* ReadableTimeValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C6E7133B004B0095F5CF /* ReadableTimeValueTransformer.m */; };
 		DA8E880D0BFF8929004BDBB7 /* Growl-WithInstaller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */; };
 		DA8E88650BFF8CCC004BDBB7 /* Growl-WithInstaller.framework in Add Growl */ = {isa = PBXBuildFile; fileRef = DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */; };
+		DAC3112A1343D8C900F0F3C1 /* cloak-status.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC311291343D8C900F0F3C1 /* cloak-status.png */; };
+		DAC3112D1343D8E400F0F3C1 /* Cloak.icns in Resources */ = {isa = PBXBuildFile; fileRef = DAC3112C1343D8E400F0F3C1 /* Cloak.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		DA61C701133B02220095F5CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA61C703133B02220095F5CF /* CloakTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloakTests-Prefix.pch"; sourceTree = "<group>"; };
 		DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Growl-WithInstaller.framework"; sourceTree = "<group>"; };
+		DAC311291343D8C900F0F3C1 /* cloak-status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloak-status.png"; sourceTree = "<group>"; };
+		DAC3112C1343D8E400F0F3C1 /* Cloak.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Cloak.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DAC3112C1343D8E400F0F3C1 /* Cloak.icns */,
+				DAC311291343D8C900F0F3C1 /* cloak-status.png */,
 				DA1B35280B86EC4500E2D853 /* Credits.html */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -296,6 +302,8 @@
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				DA1B352A0B86EC4500E2D853 /* Credits.html in Resources */,
+				DAC3112A1343D8C900F0F3C1 /* cloak-status.png in Resources */,
+				DAC3112D1343D8E400F0F3C1 /* Cloak.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +588,7 @@
 				DAE8E5F8133D3509007D44DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
