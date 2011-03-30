@@ -138,6 +138,7 @@
 	[statusItem setMenu: appMenu];
 	[statusItem setEnabled:YES];
 	[statusItem setHighlightMode:YES];
+	[statusItem setToolTip:@"Cloak"];
 	[statusItem retain];
 }
 
