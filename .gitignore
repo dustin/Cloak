@@ -4,7 +4,7 @@
 *~.nib
 .DS_Store
 ._Sparkle.framework
-Growl-WithInstaller.framework
+Growl.framework
 Sparkle.framework
 __MACOSX
 build

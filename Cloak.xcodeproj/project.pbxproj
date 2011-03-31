@@ -35,10 +35,10 @@
 		DA61C702133B02220095F5CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA61C700133B02220095F5CF /* InfoPlist.strings */; };
 		DA61C70B133B03970095F5CF /* ValueTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C6EA133B01900095F5CF /* ValueTransformerTests.m */; };
 		DA61C70C133B03C00095F5CF /* ReadableTimeValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C6E7133B004B0095F5CF /* ReadableTimeValueTransformer.m */; };
-		DA8E880D0BFF8929004BDBB7 /* Growl-WithInstaller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */; };
-		DA8E88650BFF8CCC004BDBB7 /* Growl-WithInstaller.framework in Add Growl */ = {isa = PBXBuildFile; fileRef = DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */; };
 		DAC3112A1343D8C900F0F3C1 /* cloak-status.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC311291343D8C900F0F3C1 /* cloak-status.png */; };
 		DAC3112D1343D8E400F0F3C1 /* Cloak.icns in Resources */ = {isa = PBXBuildFile; fileRef = DAC3112C1343D8E400F0F3C1 /* Cloak.icns */; };
+		DAFF104313450FCE004423AC /* Growl.framework in Add Growl */ = {isa = PBXBuildFile; fileRef = DAFF104213450FBF004423AC /* Growl.framework */; };
+		DAFF104413450FD3004423AC /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFF104213450FBF004423AC /* Growl.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DA8E88650BFF8CCC004BDBB7 /* Growl-WithInstaller.framework in Add Growl */,
+				DAFF104313450FCE004423AC /* Growl.framework in Add Growl */,
 			);
 			name = "Add Growl";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,9 +93,9 @@
 		DA61C6FF133B02220095F5CF /* CloakTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CloakTests-Info.plist"; sourceTree = "<group>"; };
 		DA61C701133B02220095F5CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA61C703133B02220095F5CF /* CloakTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloakTests-Prefix.pch"; sourceTree = "<group>"; };
-		DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Growl-WithInstaller.framework"; sourceTree = "<group>"; };
 		DAC311291343D8C900F0F3C1 /* cloak-status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloak-status.png"; sourceTree = "<group>"; };
 		DAC3112C1343D8E400F0F3C1 /* Cloak.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Cloak.icns; sourceTree = "<group>"; };
+		DAFF104213450FBF004423AC /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				DA8E880D0BFF8929004BDBB7 /* Growl-WithInstaller.framework in Frameworks */,
+				DAFF104413450FD3004423AC /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +200,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DA8E880C0BFF8929004BDBB7 /* Growl-WithInstaller.framework */,
+				DAFF104213450FBF004423AC /* Growl.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				DA61C6FB133B02220095F5CF /* Cocoa.framework */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
@@ -424,9 +424,11 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -449,9 +451,11 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
